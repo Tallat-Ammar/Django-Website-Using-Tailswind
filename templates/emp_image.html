@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang="en">
+ {%load static%}
+ <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+    
+<head> 
+    <style>
+    body{background-image: url('{%static "images/1234567.jpg"%}');}
+        form{margin-left: 2cm; font-size: 150%; color: white; background-color: black; width: 30%;   margin-top: 3cm;  background-repeat: no-repeat; background-size: 100%;}
+    h1{margin-top: 0%; border-style: double; border-color: lightseagreen;  color: azure; font-style: oblique;   text-align: center;  background-image: url('{%static "images/header.jpg"%}'); height: 2cm; background-size: 100%;}
+    h2{border-style: double; border-color: lightseagreen;  color: azure; font-style: oblique;   text-align: right;  background-image: url('{%static "images/header.jpg"%}'); height: 2cm; background-size: 100%;}
+   button{background-color: black; color: white; border-radius: 10%; size: 1cm; margin-right: 2cm; margin-top: 0cm; width: 7cm; height: 1cm; font-style: oblique; font-size: large; border-style: double; border-color: lightseagreen;}
+    </style> 
+    <meta charset="UTF-8"> 
+    
+</head> 
+<body style="background-color: cadetblue;"> 
+
+    
+    <h1 >Advertisement Network</h1>
+    
+    <form   method = "post" enctype="multipart/form-data">
+       
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit">Upload</button> 
+    </form> 
+           
+        
+</body> 
+</html> 

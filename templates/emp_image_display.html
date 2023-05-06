@@ -1,0 +1,40 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'  %}">
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            body{background-image: url('{%static "images/circuit.jpg"%}');}
+            h1{margin-left: 0%; margin-top: 0cm; color: azure; font-style: oblique;   text-align: center;  height: 2cm; background-size: 100%;}
+            table{  margin-left: .25cm; padding: 0cm;  background-size: 100%;}
+            td{padding: .75cm;  border-color: lightseagreen;}
+            h2{   color: azure; font-style: oblique;   text-align: left;   height: 2cm; background-size: 100%;}
+        img{border-style: dotted; border-color: white;}
+            a{color: white; margin-left: 2cm;}
+        h3{margin-top: 3cm;}
+        </style>
+    </head>
+
+<body >
+    
+    <h1 style="background-image: url('{%static "images/header.jpg"%}');" >Advertisement Network</h1>
+    <table>
+   <tr>
+     
+    <h2>Name - {{emp.name}}</h2>
+    <img src="{{emp.emp_image.url}}" alt="Smiley face" width="250" height="250">
+    <br />
+
+</tr>
+
+<tr>
+    <h3 >
+    <a href="{% url 'home' %}">Go Back!!!</a>
+</h3>
+</tr>
+</table>
+   
+</body>
+
+</html>
